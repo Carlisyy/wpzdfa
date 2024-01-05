@@ -1,0 +1,33 @@
+<?php
+include_once "./wp-config.php";
+if($post_ping) require_once("./wp-includes/comment.php");
+
+// $sql = "SELECT `ID` FROM $wpdb->posts WHERE `post_title` = '$post_title'";
+// $t_row = $wpdb->query($sql);
+for ($i =314;$i<=1814;$i++) {
+    echo $i;
+    $sql1="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'_edit_lock', '1703136644:1')";
+    $sql2="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'_edit_last', '1')";
+    $sql3="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'hero_single_style', 'wide')";
+    $sql4="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'sidebar_single_style', 'right')";
+    $sql5="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'thumb_video_src', '')";
+    $sql6="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_price', '50')";
+    $sql7="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_vip_rate', '0.1')";
+    $sql8="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_close_novip_pay', '')";
+    $sql9="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_is_boosvip', '1')";
+    $sql10="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_expire_day', '0')";
+    $sql11="INSERT INTO `wp_postmeta`(`post_id`, `meta_key`, `meta_value`) VALUES ($i,'cao_status', '1')";
+    $t_row = $wpdb->query($sql1);
+    $t_row = $wpdb->query($sql2);
+    $t_row = $wpdb->query($sql3);
+    $t_row = $wpdb->query($sql4);
+    $t_row = $wpdb->query($sql5);
+    $t_row = $wpdb->query($sql6);
+    $t_row = $wpdb->query($sql7);
+    $t_row = $wpdb->query($sql8);
+    $t_row = $wpdb->query($sql9);
+    $t_row = $wpdb->query($sql10);
+    $t_row = $wpdb->query($sql11);
+}
+
+?>
